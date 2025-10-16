@@ -17,6 +17,7 @@ ASK_SEMESTER = 1
 pdf_data = {}
 
 # --- /start ---
+@bot.message_handler(commands=['start'])
 async def start(update: Update, context):
     await update.message.reply_text(
         "Salom! 📚 Men faqat kredit va ballga asoslanib o‘rta reytingni hisoblayman.\n"
@@ -151,3 +152,4 @@ if __name__ == "__main__":
 
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
